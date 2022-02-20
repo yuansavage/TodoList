@@ -1,6 +1,5 @@
 # TodoList
 
---steps
-npm install
-json-server db.json
-npm run dev
+1. npm install
+2. json-server db.json
+3. npm run dev
