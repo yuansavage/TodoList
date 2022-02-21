@@ -1,5 +1,5 @@
 # TodoList
 
 1. npm install
-2. json-server db.json
-3. npm run dev
+2. json-server db.json (on localhost:3000)
+3. npm run dev (on the other port)
