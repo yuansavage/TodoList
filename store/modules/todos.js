@@ -1,7 +1,8 @@
 export const namespaced = true
 
 export const state = {
-  todos: []
+  todos: [],
+  todo:{}
 }
 
 export const mutations = {
@@ -16,7 +17,7 @@ export const mutations = {
     state.todos.splice(index, 1);
   },
   toggleTodo(state, bool) {
-		todo.done = bool;
+		state.todo.done = bool;
 	}
 }
 
@@ -52,7 +53,7 @@ export const actions = {
     try {
       const obj = {done:!todo.done}
       const { data } = await this.$axios.patch(`/todos/${todo.id}`,obj)
-     // if (data) commit('toggleTodo', !todo.done)
+      if (data) commit('toggleTodo', !todo.done)
     } catch (error) {
       console.log(error);
     }
